@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --box-shadow-neon-green: hsla(150, 100%, 66%, 0.644);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+    --advice-font-size: 1.75rem;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.page {
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-blue);
+}
+
+.advice-box {
+    width: 100%;
+    padding: 3rem 1.125rem 5rem;
+    background-color: var(--dark-grayish-blue);
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    gap: 2.25rem;
+    position: relative;
+}
+
+.advice-box p {
+    color: var(--neon-green);
+    font-weight: 600;
+    letter-spacing: .325rem;
+}
+
+.advice-box h1 {
+    margin: 0;
+    color: var(--light-cyan);
+    font-size: var(--advice-font-size);
+    line-height: 1.6;
+}
+
+.advice-box h1 .loading {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.advice-box h1 .loading > * {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--neon-green);
+    animation: loading 1s linear infinite both;
+}
+
+.advice-box h1 .loading span:nth-child(1) {
+    animation-delay: .2s;
+}
+
+.advice-box h1 .loading span:nth-child(2) {
+    animation-delay: .4s;
+}
+
+.advice-box h1 .loading span:nth-child(3) {
+    animation-delay: .6s;
+}
+
+@keyframes loading {
+    0%, 100% {
+        transform: translateY(-15px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+
+.advice-box .random-advice {
+    position: absolute;
+    background-color: var(--neon-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    outline: transparent;
+    border: none;
+    border-radius: 50%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.advice-box .random-advice:hover {
+    box-shadow: 0 0 25px 5px var(--box-shadow-neon-green);
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 580px;
+    }
+    .advice-box {
+        padding: 3rem 3rem 5rem;
+    }
+}
