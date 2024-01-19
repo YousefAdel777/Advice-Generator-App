@@ -25,7 +25,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://www.frontendmentor.io/solutions/advice-generator-using-slip-api-and-vanilla-javascript-x6BHDFwIh0)
-- Live Site URL: (https://your-live-site-url.com)
+- Live Site URL: (https://yousefadel777.github.io/Advice-Generator-App/)
 
 ## My process
 
