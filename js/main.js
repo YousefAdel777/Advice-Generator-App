@@ -17,7 +17,6 @@ async function displayAdvice(promise) {
     advice.appendChild(loading);
     try {
         let adviceData = await promise;
-        console.log(adviceData.slip.advice);
         advice.innerHTML = `"${adviceData.slip.advice}"`;
         adviceId.innerHTML = `${adviceData.slip.id}`;
     }

@@ -50,13 +50,14 @@ body {
     color: var(--neon-green);
     font-weight: 600;
     letter-spacing: .325rem;
+    font-size: .9rem;
 }
 
 .advice-box h1 {
     margin: 0;
     color: var(--light-cyan);
     font-size: var(--advice-font-size);
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
 .advice-box h1 .loading {
